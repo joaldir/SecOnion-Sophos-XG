@@ -1,0 +1,240 @@
+    1  docker -it so-filebeat /bin/bahs
+    2  docker exec -it so-filebeat /bin/bash
+    3  ls
+    4  git clone https://github.com/weslambert/SOARLab.git
+    5  ls
+    6  cd SOARLab/
+    7  ls
+    8  ./install_lab 
+    9  ls
+   10  vim /opt/so/saltstack/local/pillar/minions/seconion_standalone
+   11  vim /opt/so/saltstack/local/pillar/minions/seconion_standalone.sls 
+   12  vim /opt/so/saltstack/local/pillar/minions/seconion_standalone.sls 
+   13  so-firewall 
+   14  so-firewall listhostgroups
+   15  so-firewall addport velociraptor udp 9005
+   16  so-firewall addport velociraptor udp 9005
+   17  so-firewall addport velociraptor 
+   18  ls
+   19  so-firewall listhostgroups
+   20  tcpdump -i ens192 port 9005
+   21  ls
+   22  so-filebeat-restart 
+   23  ip a
+   24  tcpdump -i docker0
+   25  tcpdump -i docker0 port 9005
+   26  vim /usr/sbin/so-firewall addhostgroup sophosxg
+   27  /usr/sbin/so-firewall addhostgroup sophosxg
+   28  /usr/sbin/so-firewall addportgroup sophosxg
+   29  /usr/sbin/so-firewall addport sophosxg udp 9005
+   30  /usr/sbin/so-firewall includehost sophosxg 192.168.7.7
+   31  vim /opt/so/saltstack/local/pillar/minions/seconion_standalone.sls 
+   32  sudo salt-call state.apply firewall
+   33  so-filebeat-restart
+   34  tcpdump -i docker0 port 9005
+   35  sudo salt-call state.apply firewall
+   36  tcpdump -i docker0 port 9005
+   37  so-filebeat-module-setup 
+   38  so-elasticsearch-indices-list 
+   39  ls
+   40  so-elasticsearch-pipelines-list 
+   41  so-elasticsearch-templates-list 
+   42  so-elasticsearch-templates-load 
+   43  yum install mlocate
+   44  updatedb
+   45  locate ingest
+   46  locate ingest | grep sophos
+   47  locate 9501
+   48  cd /opt/so/saltstack/local/pillar/logstash/
+   49  ls
+   50  cd /
+   51  vim /opt/so/saltstack/local/pillar/logstash/search.sls [B
+   52  locate 9501
+   53  cat /home/spartacus/SOARLab/salt/logstash/pipelines/config/custom/9501_output_velociraptor.conf.jinja
+   54  locate so-sophos
+   55  cat /home/spartacus/SecurityOnion/salt/elasticsearch/templates/so/so-sophos-template.json.jinja
+   56  cd /opt/so/saltstack/local/salt/elasticsearch/files/ingest/
+   57  ls
+   58  cat velociraptor 
+   59  cd /opt/so/saltstack/local/salt/elasticsearch/files/ingest/
+   60  ls
+   61  cd /opt/so/conf/elasticsearch/ingest/
+   62  ls
+   63  cat sys
+   64  cat syslog 
+   65  cat /home/spartacus/SecurityOnion/salt/elasticsearch/templates/so/so-sophos-template.json.jinja
+   66  updatedb
+   67  locate so-sophos
+   68  cat /home/spartacus/SecurityOnion/salt/curator/files/action/so-sophos-delete.yml
+   69  s
+   70  ls
+   71  cd ..
+   72  ls
+   73  cd templates/
+   74  ls
+   75  cat so-velociraptor-template.json 
+   76  cat so-zeek-template.json
+   77  cd /opt/so/saltstack/local/salt/logstash/pipelines/config/custom/
+   78  ls
+   79  cat 9501_output_velociraptor.conf.jinja 
+   80  cd /opt/so/saltstack/local/salt/elasticsearch/files/ingest/
+   81  ls
+   82  cat velociraptor 
+   83  locate so-sophos
+   84  cp /home/spartacus/SecurityOnion/salt/elasticsearch/templates/so/so-sophos-template.json.jinja .
+   85  ls
+   86  so-elasticsearch-template-view 
+   87  so-elasticsearch-template-view | grep sophos
+   88  so-elasticsearch-template-view | grep -B 10 -A 10 sophos
+   89  so-elasticsearch-template-list
+   90  ls
+   91  so-elastic-restart 
+   92  so-elasticsearch-pipeline-stats
+   93  so-elasticsearch-pipelines-list 
+   94  locate filebeat-7.15.2-sophos-xg
+   95  ls
+   96  cat so-sophos-template.json.jinja 
+   97  locate so-sophos
+   98  cat velociraptor 
+   99  ls
+  100  rm so-sophos-template.json.jinja 
+  101  cd ..
+  102  ls
+  103  cd ..
+  104  ls
+  105  te
+  106  templates/
+  107  ls
+  108  cd templates/
+  109  ls
+  110  cd custom/
+  111  ls
+  112  cd /opt/so/saltstack/local/salt/elasticsearch/templates/custom/
+  113  ls
+  114  locate so-sophos
+  115  cd /home/spartacus/SecurityOnion/salt/elasticsearch/templates/so/so-sophos-template.json.jinja .
+  116  cd /home/spartacus/SecurityOnion/salt/elasticsearch/templates/so/so-sophos-template.json.jinja .
+  117  cp /home/spartacus/SecurityOnion/salt/elasticsearch/templates/so/so-sophos-template.json.jinja .
+  118  ls
+  119  so-elastic-restart
+  120  ls
+  121  locate sophos
+  122  so-elasticsearch-pipelines-list 
+  123  so-elastic-restart
+  124  so-elastic-restart 
+  125  ls
+  126  so-status
+  127  pwd
+  128  reboot
+  129  so-status
+  130  so-status
+  131  so-status
+  132  so-status
+  133  so-status
+  134  so-status
+  135  so-elasticsearch-pipelines-list 
+  136  so-elasticsearch-pipelines-list | grep sophos
+  137  locate
+  138  locate sophos-xg
+  139  locate sophos
+  140  cat /var/lib/docker/overlay2/e9476c0f92611ffa6d409755045ddfd6884b08c0829a0e4eeb0d56875d8497cf/diff/usr/share/filebeat/module/sophos/xg/ingest
+  141  cat /var/lib/docker/overlay2/e9476c0f92611ffa6d409755045ddfd6884b08c0829a0e4eeb0d56875d8497cf/diff/usr/share/filebeat/module/sophos/xg/config/config.yml
+  142  cd /var/lib/docker/overlay2/e9476c0f92611ffa6d409755045ddfd6884b08c0829a0e4eeb0d56875d8497cf/diff/usr/share/filebeat/module/sophos/xg/ingest/pipeline.yml
+  143  cat /var/lib/docker/overlay2/e9476c0f92611ffa6d409755045ddfd6884b08c0829a0e4eeb0d56875d8497cf/diff/usr/share/filebeat/module/sophos/xg/ingest/pipeline.yml
+  144  cat /var/lib/docker/overlay2/e9476c0f92611ffa6d409755045ddfd6884b08c0829a0e4eeb0d56875d8497cf/diff/usr/share/filebeat/module/sophos/xg/ingest/firewall.yml 
+  145  cat /var/lib/docker/overlay2/e9476c0f92611ffa6d409755045ddfd6884b08c0829a0e4eeb0d56875d8497cf/diff/usr/share/filebeat/module/sophos/xg/ingest/pipeline.yml
+  146  so-elasticsearch-indices-list 
+  147  so-elasticsearch-indices-indices-rw
+  148  so-elasticsearch-indices-rw
+  149  so-elasticsearch-indices-list 
+  150  ls
+  151  cd /opt/so/saltstack/local/salt/elasticsearch/templates/custom/
+  152  ls
+  153  cat so-sophos-template.json.jinja 
+  154  so-elasticsearch-templates-list 
+  155  so-elasticsearch-templates-load 
+  156  docker exec -it so-elasticsearch /bin/bash
+  157  so-elasticsearch-pipelines-list 
+  158  locate pipeline
+  159  /var/lib/docker/overlay2/7c145b134e9b9249729e2066709d26322e1269f5aa2c66b837c8b690df63d15e/diff/usr/share/filebeat/module/apache/access/ingest/pipeline.yml
+  160  cat /var/lib/docker/overlay2/7c145b134e9b9249729e2066709d26322e1269f5aa2c66b837c8b690df63d15e/diff/usr/share/filebeat/module/apache/access/ingest/pipeline.yml
+  161  so-filebeat-module-setup -h
+  162  locate pipeline
+  163  cat /var/cache/salt/master/roots/hash/base/logstash/pipelines/config/so/9050_output_filebeatmodules.conf.jinja.hash.sha256
+  164  locate 9050
+  165  cat /opt/so/saltstack/default/salt/logstash/pipelines/config/so/9050_output_filebeatmodules.conf.jinja
+  166  cat /opt/so/saltstack/local/salt/elasticsearch/templates/so/so-common-template.json.jinja
+  167  cp /opt/so/saltstack/default/salt/logstash/pipelines/config/so/9050_output_filebeatmodules.conf.jinja /opt/so/saltstack/local/salt/logstash/pipelines/config/custom/
+  168  cd /opt/so/saltstack/local/salt/logstash/pipelines/config/custom/
+  169  ls
+  170  rm 9050_output_filebeatmodules.conf.jinja 
+  171  ls
+  172  cd /opt/so/saltstack/default/salt/logstash/pipelines/config/so/
+  173  ls
+  174  ls
+  175  /opt/so/saltstack/local/salt/elasticsearch/templates/custom/
+  176  ls
+  177  cd /opt/so/saltstack/local/salt/elasticsearch/templates/custom/
+  178  ls
+  179  cd ..
+  180  ls
+  181  cd so
+  182  ls
+  183  cd /opt/so/saltstack/local/pillar/logstash/
+  184  ls
+  185  vim search.sls 
+  186  pwd
+  187  vim search.sls 
+  188  ls
+  189  vim search.sls 
+  190  sudo so-logstash-restart
+  191  docker exec -it so-logstash /bin/bash
+  192  so-elasticsearch-indices-list 
+  193  so-elasticsearch-indices-list 
+  194  so-elasticsearch-indices-load
+  195  so-elasticsearch-templates-load 
+  196  ls
+  197  cd /opt/so/saltstack/local/salt/logstash/pipelines/config/
+  198  ls
+  199  cd so/
+  200  ls
+  201  cd ..
+  202  locate 9050
+  203  cat /opt/so/saltstack/default/salt/logstash/pipelines/config/so/9050_output_filebeatmodules.conf.jinja
+  204  history
+  205  history
+  206   cd /opt/so/saltstack/local/salt/elasticsearch/templates/custom/
+  207  ls
+  208  cat so-sophos-template.json.jinja 
+  209  ls
+  210  cd /opt/so/saltstack/local/salt/logstash/pipelines/config/custom/
+  211  ls
+  212   cd /opt/so/saltstack/local/pillar/logstash/
+  213  ls
+  214  vim search.sls 
+  215  ls
+  216  cd cd /opt/so/saltstack/local/salt/elasticsearch/templates/
+  217  cd /opt/so/saltstack/local/salt/elasticsearch/templates/
+  218  ls
+  219  cd so
+  220  ls
+  221  cd ..
+  222  ls
+  223  cd custom/
+  224  ls
+  225  cd ..
+  226  ls
+  227  cd so
+  228  ls
+  229  pwd
+  230  cd cus
+  231  cd ..
+  232  ls
+  233  cd custom/
+  234  ls
+  235  cat so-sophos-template.json.jinja 
+  236  cd /opt/so/saltstack/local/pillar/minions/
+  237  ls
+  238  vim seconion_standalone.sls 
+  239  history
+  240  history > history_command_seconion_sophosxg
